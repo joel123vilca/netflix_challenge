@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
 import * as userActions from "../../redux/actions/userActions";
-import { useDispatch } from "react-redux";
+import { userSelector } from "../../redux/selectors/UserSelectors";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./login.scss";
 
-const Login = () => {
+const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
@@ -12,6 +13,8 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const user = useSelector(userSelector);
 
   const onSubmit = (data) => {
     dispatch(userActions.postLogin({ payload: data }));
@@ -23,6 +26,8 @@ const Login = () => {
   };
 
   const intialValues = {
+    name: "",
+    lastName: "",
     email: "",
     password: "",
   };
@@ -32,7 +37,7 @@ const Login = () => {
       <div className="login-content">
         <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
           <h1 className="title" data-testid="title">
-            Sign In
+            Sign Up
           </h1>
 
           {/* <div className="errors--api">
@@ -76,14 +81,8 @@ const Login = () => {
             )}
           </div>
           <button className="login-submit" type="submit">
-            Sign In
+            Register
           </button>
-          <div className="info">
-            New to Netflix?{" "}
-            <a className="login-signup" href="/create">
-              Sign up now
-            </a>
-          </div>
         </form>
         <div className="footer">
           <p>¿Preguntas? Llama al 0-800-52352</p>
@@ -95,4 +94,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

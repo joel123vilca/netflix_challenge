@@ -1,8 +1,13 @@
 import "./home.scss";
 import tv from "../../assets/images/tv.png";
 import movie from "../../assets/images/fondo.m4v";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const toLogin = () => {
+    navigate(`/login`);
+  };
   return (
     <div>
       <div className="home-page">
@@ -17,9 +22,9 @@ const Home = () => {
                 />
               </a>
             </div>
-            <a href="/login" className="btn-login" data-testid="title">
+            <button className="btn-login" data-testid="title" onClick={toLogin}>
               Sign In
-            </a>
+            </button>
           </div>
           <div className="header-content">
             <div className="home-info">
