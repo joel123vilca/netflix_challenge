@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./header.scss";
 import search from "../../../assets/images/search.png";
 
@@ -23,7 +22,7 @@ export default ({ black }) => {
             alt="Netflix"
           />
         </a>
-        <a >home</a>
+        <a>home</a>
         <a>List</a>
       </div>
       <div className="header--user">
