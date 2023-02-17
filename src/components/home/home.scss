@@ -1,0 +1,165 @@
+:root {
+  --button-color: #e50914;
+  --title-color: white;
+}
+.home-page {
+  background-size: cover;
+  height: 100%;
+  min-height: 70vh;
+  overflow: hidden;
+  width: 100%;
+  z-index: auto;
+  background-image: url("https://rb.gy/p2hphi");
+  .home-content {
+    width: inherit;
+    height: 70vh;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  width: inherit;
+  margin-top: 30px;
+}
+.logo {
+  width: 120px;
+  margin-left: 20px;
+}
+.btn-login {
+  height: 20px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.35rem;
+  padding: 4px 8px;
+  background-color: var(--button-color);
+  color: var(--title-color);
+  text-decoration: none;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+.home-info {
+  width: 600px;
+  text-align: center;
+}
+
+.title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: var(--title-color);
+}
+.subtitle {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  color: var(--title-color);
+  margin-bottom: 10px;
+}
+.input-email {
+  height: 48px;
+  width: 348px;
+  font-size: 16px;
+  outline: none;
+}
+.btn-link {
+  width: 182px;
+  height: 54px;
+  color: var(--title-color);
+  background-color: var(--button-color);
+  font-size: 18px;
+  font-weight: 700;
+  border-color: var(--button-color);
+  outline: none;
+  cursor: pointer;
+}
+.section {
+  background-color: black;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  border-bottom: 8px solid #222;
+  display: block;
+  height: 400px;
+}
+.section-one-content {
+  padding: 15px 45px 15px 45px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 400px 450px;
+  .section-text {
+    margin-top: 30px;
+  }
+  .section-video {
+    margin-left: 50px;
+  }
+}
+
+.section-title {
+  font-size: 34px;
+}
+.section-subtitle {
+  font-size: 20px;
+}
+.div-video-tv {
+  width: 285px;
+  height: 180px;
+  z-index: auto;
+  margin-top: 30px;
+  .video-tv {
+    width: 100%;
+    margin-left: 58px;
+  }
+}
+.div-image-tv-content {
+  height: 200px;
+  margin-top: -240px;
+  .img-secction-one {
+    width: 400px;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-info {
+    margin-top: 80px;
+    width: 380px;
+    text-align: center;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+  .btn-link {
+    margin-top: 10px;
+  }
+  .section {
+    height: 600px;
+  }
+  .section-one-content {
+    padding: 15px 45px 15px 45px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 400px;
+    .section-text {
+      margin-top: 30px;
+    }
+    .section-video {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .section-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
