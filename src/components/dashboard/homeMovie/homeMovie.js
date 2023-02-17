@@ -29,10 +29,12 @@ const homeMovie = ({ item }) => {
           </div>
           <div className="featured--description">{description}</div>
           <div className="featured--buttons">
-            <a className="featured--watchButton" href={`/watch/${item.id}`}>
+            <a className="featured--watchButton" href="">
               ▶ Play
             </a>
-            <a className="featured--myListButton">+ My List</a>
+            <a className="featured--myListButton" href="">
+              + My List
+            </a>
           </div>
           <div className="featured--genres">
             <strong>Genres: </strong>

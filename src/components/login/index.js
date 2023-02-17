@@ -18,10 +18,10 @@ const Login = () => {
 
   const onSubmit = (data) => {
     dispatch(userActions.postLogin({ payload: data }));
+    toDashboard()
   };
 
   const toDashboard = () => {
-    console.log("ya se ejecuto", user);
     if (user) {
       navigate(`/dashboard`);
     }

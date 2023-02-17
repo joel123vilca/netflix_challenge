@@ -22,8 +22,6 @@ const Header = ({ black }) => {
             alt="Netflix"
           />
         </a>
-        <a>home</a>
-        <a>List</a>
       </div>
       <div className="header--user">
         <div class="search">
