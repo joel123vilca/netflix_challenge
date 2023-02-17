@@ -16,6 +16,7 @@ const MovieList = ({ title, movies, seeTrailer }) => {
                 src={`https://image.tmdb.org/t/p/w500${
                   movie.backdrop_path || movie.poster_path
                 }`}
+                alt="img movie"
               ></img>
             </div>
           ))}

@@ -58,7 +58,7 @@ const Home = () => {
               ></video>
             </div>
             <div className="div-image-tv-content">
-              <img src={tv} className="img-secction-one" />
+              <img src={tv} className="img-secction-one" alt="section" />
             </div>
           </div>
         </div>

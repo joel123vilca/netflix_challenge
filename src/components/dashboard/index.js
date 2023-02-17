@@ -20,9 +20,6 @@ const Dashboard = () => {
   const [openModal, setOpenModal] = useState(false);
   const [blackHeader, setBalckHeader] = useState(false);
 
-  useEffect(() => {
-    dispatch(moviesActions.getMovies());
-  }, []);
   const API_KEY = "c1bc8e71df17c4559f456ef264867656";
 
   const closeModal = () => {
@@ -48,6 +45,10 @@ const Dashboard = () => {
     }
     setOpenModal(true);
   };
+
+  useEffect(() => {
+    dispatch(moviesActions.getMovies());
+  }, [dispatch]);
 
   useEffect(() => {
     const scrollListener = () => {

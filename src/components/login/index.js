@@ -18,7 +18,7 @@ const Login = () => {
 
   const onSubmit = (data) => {
     dispatch(userActions.postLogin({ payload: data }));
-    toDashboard()
+    toDashboard();
   };
 
   const toDashboard = () => {
@@ -84,7 +84,10 @@ const Login = () => {
             Sign In
           </button>
           <div className="info">
-            New to Netflix? <a className="login-signup">Sign up now</a>
+            New to Netflix?{" "}
+            <a className="login-signup" href="/create">
+              Sign up now
+            </a>
           </div>
         </form>
         <div className="footer">
