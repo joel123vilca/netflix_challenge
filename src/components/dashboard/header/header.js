@@ -3,7 +3,7 @@ import search from "../../../assets/images/search.png";
 
 import * as moviesActions from "../../../redux/actions/moviesActions";
 import { useDispatch } from "react-redux";
-export default ({ black }) => {
+const Header = ({ black }) => {
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -45,3 +45,5 @@ export default ({ black }) => {
     </header>
   );
 };
+
+export default Header;
